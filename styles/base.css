@@ -1,21 +1,17 @@
-/* Google Fonts Import */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
-/* Base Styling */
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: #333;
-    /* Replace with your color scheme */
     background-color: #f4f4f4;
-    /* Replace with your background color */
     line-height: 1.6;
 }
 
-/* Header */
 header {
     background-color: #00d5ff;
-    /* Replace with your chosen color */
     color: black;
     padding: 1rem 0;
     text-align: center;
@@ -27,7 +23,6 @@ header h1 {
     font-size: 1.8rem;
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -58,15 +53,11 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: greenyellow;
-    /* Hover effect color */
     color: white;
-    /* Text color on hover */
 }
 
-/* Main Section */
 main {
     max-width: 800px;
-    /* Limit width of main */
     margin: 2rem auto;
     padding: 1rem;
     background-color: white;
@@ -74,16 +65,13 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Fixed Card Layout */
 section.card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* Fixed three-column layout */
     gap: 1rem;
     padding: 1rem;
 }
 
-/* Footer */
 footer {
     text-align: center;
     background-color: #00d5ff;
