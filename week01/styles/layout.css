@@ -8,8 +8,8 @@
 body {
     font-family: Arial, sans-serif;
     display: grid;
-    grid-template-rows: auto 50px 1fr auto; /* Defines rows: header, nav, main, footer */
-    grid-template-columns: 1fr 300px; /* Main content and aside */
+    grid-template-rows: auto 50px 1fr auto; 
+    grid-template-columns: 1fr 300px; 
     min-height: 100vh;
     background-color: #222;
 }
@@ -19,16 +19,19 @@ body {
     background-color: #333;
     color: white;
     padding: 20px;
-    grid-row: 1; /* Header stays in the first row */
-    grid-column: 1 / -1; /* Spans all columns */
+    grid-column: 1 / -1; 
     display: flex;
+    flex-direction: column; 
     justify-content: flex-start;
     align-items: flex-start;
-    font-size: 1.2rem;
 }
 
+.header h1 {
+    margin-bottom: 20px; 
+}
 
 nav {
+    width: 100%; 
     background-color: black;
     display: flex;
     justify-content: center;
@@ -39,9 +42,10 @@ nav {
 .nav-menu {
     list-style: none;
     display: flex;
-    justify-content: space-evenly; 
-    width: 100%; 
-
+    justify-content: space-around; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-menu li {
@@ -79,8 +83,8 @@ nav {
     color: white;
     text-align: center;
     padding: 20px; 
-    grid-row: 4; /* Places footer in the last row */
-    grid-column: 1 / -1; /* Spans across all columns */
+    grid-row: 4; 
+    grid-column: 1 / -1; 
     height: 50px; 
     display: flex; 
     justify-content: center; 
