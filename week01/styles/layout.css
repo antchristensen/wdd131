@@ -8,29 +8,29 @@
 body {
     font-family: Arial, sans-serif;
     display: grid;
-    grid-template-rows: auto 50px 1fr auto; 
-    grid-template-columns: 1fr 300px; 
-    min-height: 100vh; 
+    grid-template-rows: auto 50px 1fr auto; /* Defines rows: header, nav, main, footer */
+    grid-template-columns: 1fr 300px; /* Main content and aside */
+    min-height: 100vh;
+    background-color: #222;
 }
+
 
 .header {
     background-color: #333;
     color: white;
-    text-align: left;
-    padding: 20px 20px;
-    grid-column: 1 / -1; 
-    height: 150px; 
-    display: flex; 
-    justify-content: left; 
-    align-items: flex-start; 
-    font-size: xx-small;
+    padding: 20px;
+    grid-row: 1; /* Header stays in the first row */
+    grid-column: 1 / -1; /* Spans all columns */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.2rem;
 }
+
 
 nav {
     background-color: black;
-    grid-row: 2; 
-    grid-column: 1 / -1; 
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
@@ -41,8 +41,7 @@ nav {
     display: flex;
     justify-content: space-evenly; 
     width: 100%; 
-    padding: 0;
-    margin: 0;
+
 }
 
 .nav-menu li {
@@ -79,10 +78,10 @@ nav {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 20px; 
-    grid-column: 1 / -1; 
-    height: 275px; 
+    padding: 20px; 
+    grid-row: 4; /* Places footer in the last row */
+    grid-column: 1 / -1; /* Spans across all columns */
+    height: 50px; 
     display: flex; 
     justify-content: center; 
-    align-items: flex-start; 
 }
