@@ -1,14 +1,36 @@
-const input = document.querySelector('#favchap');
-const button = document.querySelector('button');
-const list = document.querySelector('')
+const input = document.querySelector('#favchap'); 
+const button = document.querySelector('button'); 
+const list = document.querySelector('#list'); 
 
-const li = document.createElement('li')
-const deletebutton = document.createElement('button');
 
-li.textContent = input.ariaValueMax;
+button.addEventListener('click', function () {
 
-deletebutton.textContent = '❌';
+  const chapter = input.value.trim();
+    if (chapter === '') {
+    alert('Please enter a book and chapter.'); 
+    input.focus();
+    return; 
+  }
 
-li.append(deleteButton);
 
-list.append(li);
+  const li = document.createElement('li');
+  const deleteButton = document.createElement('button');
+
+
+  li.textContent = chapter;
+  deleteButton.textContent = '❌';
+
+
+  li.append(deleteButton);
+
+
+  list.append(li);
+
+
+  deleteButton.addEventListener('click', function () {
+    list.removeChild(li); 
+  });
+
+  input.value = '';
+  input.focus();
+});
