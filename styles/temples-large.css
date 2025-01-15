@@ -2,12 +2,34 @@
 
     .nav-menu {
         display: flex !important; 
-        flex-direction: row;
-        justify-content: center;
-        gap: 1.5rem;
-        position: static; 
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 1.5rem; 
+        list-style: none;
+        padding: 0;
+        margin: 0;
         background: none; 
+        position: static; 
         width: auto; 
+    }
+
+    .nav-menu li {
+        margin: 0; 
+    }
+
+    .nav-menu a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .nav-menu a:hover {
+        background: #1abc9c; 
+        border-radius: 5px; 
+        color: white;
     }
 
     .hamburger-btn {
@@ -16,13 +38,14 @@
 
     header {
         padding: 1.5rem 0;
-        background: #1a5a91;
+        background: #1a5a91; 
         color: white;
+        text-align: center;
     }
 
     header h1 {
         font-size: 2.5rem;
-        color: white;
+        color: white; 
     }
 
     main {
@@ -37,9 +60,9 @@
     }
 
     .gallery {
-        display: grid;
+        display: grid; 
         grid-template-columns: repeat(3, 1fr); 
-        gap: 2rem;
+        gap: 2rem; 
     }
 
     figure {
