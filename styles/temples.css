@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #124578;
+    --text-color: #000;
+    --background-color: #f4f4f4; 
+    --hover-color: #1abc9c;
+    --header-text: white;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +14,14 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
 header {
-    background: #124578;
-    color: white;
+    background: var(--primary-color);
+    color: var(--header-text);
     padding: 1rem;
     text-align: center;
     position: relative;
@@ -29,7 +37,7 @@ header h1 {
     list-style: none;
     padding: 0;
     margin: 0;
-    background: #1a5a91;
+    background: var(--primary-color);
     position: absolute;
     top: 3.5rem;
     left: 0;
@@ -47,7 +55,7 @@ header h1 {
 }
 
 .nav-menu a {
-    color: white;
+    color: var(--header-text);
     text-decoration: none;
     padding: 0.5rem;
     font-weight: bold;
@@ -62,8 +70,8 @@ header h1 {
 
 .hamburger-btn {
     display: block; 
-    background: #124578;
-    color: white;
+    background: var(--primary-color);
+    color: var(--header-text);
     border: none;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
@@ -83,7 +91,7 @@ main {
 
 main h2 {
     margin-bottom: 1.5rem;
-    color: #2c3e50;
+    color: var(--text-color);
     font-size: 1.8rem;
 }
 
@@ -96,7 +104,7 @@ main h2 {
 figure {
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--header-text);
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -111,14 +119,14 @@ figure img {
 figcaption {
     margin-top: 0.5rem;
     font-weight: bold;
-    color: #34495e;
+    color: var(--text-color);
 }
 
 footer {
     text-align: center;
     margin-top: 2rem;
     font-size: 1rem;
-    color: black; 
+    color: var(--text-color); 
     padding: 1rem;
 }
 
@@ -127,14 +135,14 @@ footer p {
 }
 
 footer span {
-    color: #000; 
+    color: var(--text-color); 
     font-weight: bold;
 }
 
 #lastModified {
     font-size: 1rem; 
-    color: #000; 
-    background-color: #ffffff; 
+    color: var(--text-color); 
+    background-color: var(--header-text); 
     padding: 0.5rem; 
     display: inline-block; 
     border-radius: 5px; 
