@@ -132,10 +132,10 @@ footer span {
 }
 
 #lastModified {
-    font-size: 1rem; /* Ensure text size is readable */
-    color: #000; /* Black text for maximum contrast */
-    background-color: #ffffff; /* White background for strong contrast */
-    padding: 0.5rem; /* Add spacing for better readability */
-    display: inline-block; /* Ensures the background wraps around the text */
-    border-radius: 5px; /* Optional: Add rounded corners for better visual appeal */
+    font-size: 1rem; 
+    color: #000; 
+    background-color: #ffffff; 
+    padding: 0.5rem; 
+    display: inline-block; 
+    border-radius: 5px; 
 }
