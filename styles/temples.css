@@ -64,7 +64,7 @@ header h1 {
 }
 
 .nav-menu a:hover {
-    background: #1abc9c;
+    background: var(--hover-color);
     border-radius: 5px;
 }
 
