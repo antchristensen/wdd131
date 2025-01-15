@@ -1,43 +1,79 @@
-/* Large Screen Styles */
+/* Large Screen Layout */
 @media (min-width: 768px) {
-    body {
-        padding: 0 2rem;
+    /* Navigation Menu - Always Visible */
+    .nav-menu {
+        display: flex !important; /* Always visible on larger screens */
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        position: static; /* Reset position */
+        background: none; /* Remove background for inline display */
+        width: auto; /* Default width for inline menu */
+    }
+
+    .hamburger-btn {
+        display: none; /* Hide hamburger button in larger screens */
     }
 
     header {
         padding: 1.5rem 0;
+        background: #3498db;
+        color: white;
     }
 
     header h1 {
         font-size: 2.5rem;
     }
 
-    nav .nav-menu {
-        flex-direction: row;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    main {
-        max-width: 800px;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
-
-@media (min-width: 1024px) {
+    /* Main Layout */
     main {
         max-width: 1200px;
+        margin: 2rem auto;
     }
 
+    main h2 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: #2c3e50;
+    }
+
+    /* Gallery - 3x3 Grid */
     .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 Columns */
         gap: 2rem;
     }
 
+    figure {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    figure img {
+        width: 100%; /* Fully responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px;
+    }
+
+    figcaption {
+        margin-top: 0.5rem;
+        font-weight: bold;
+        color: #34495e;
+    }
+
+    /* Footer Styles */
     footer {
+        text-align: center;
         margin-top: 3rem;
         font-size: 1rem;
+        color: #666;
+    }
+
+    footer p {
+        margin: 0.5rem 0;
     }
 }

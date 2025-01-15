@@ -17,8 +17,8 @@ header {
     background: #3498db;
     color: white;
     padding: 1rem;
-    position: relative;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
@@ -65,7 +65,7 @@ header h1 {
 
 /* Hamburger Button */
 .hamburger-btn {
-    display: none; /* Hidden by default */
+    display: block; /* Show by default in mobile view */
     background: #2980b9;
     color: white;
     border: none;
@@ -79,23 +79,55 @@ header h1 {
     z-index: 10;
 }
 
-/* Show hamburger button in mobile view */
-@media (max-width: 767px) {
-    .hamburger-btn {
-        display: block;
-    }
+/* Main Styles */
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
 }
 
-/* Reset menu visibility and position in larger views */
-@media (min-width: 768px) {
-    .nav-menu {
-        display: flex !important; /* Always visible on larger screens */
-        flex-direction: row;
-        position: static;
-        width: auto;
-    }
+main h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
 
-    .hamburger-btn {
-        display: none; /* Hide hamburger button */
-    }
+/* Gallery Styles - Single Column for Mobile */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+    gap: 1rem;
+}
+
+figure {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+figure img {
+    width: 100%; /* Make images fully visible */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer p {
+    margin: 0.5rem 0;
 }
