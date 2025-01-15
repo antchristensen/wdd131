@@ -117,14 +117,25 @@ figcaption {
 footer {
     text-align: center;
     margin-top: 2rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: black; 
-    background-color: #f4f4f4;
-
+    padding: 1rem;
 }
 
 footer p {
     margin: 0.5rem 0;
+}
+
+footer span {
+    color: #000; 
     font-weight: bold;
 }
 
+#lastModified {
+    font-size: 1rem; /* Ensure text size is readable */
+    color: #000; /* Black text for maximum contrast */
+    background-color: #ffffff; /* White background for strong contrast */
+    padding: 0.5rem; /* Add spacing for better readability */
+    display: inline-block; /* Ensures the background wraps around the text */
+    border-radius: 5px; /* Optional: Add rounded corners for better visual appeal */
+}
