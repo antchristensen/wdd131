@@ -7,36 +7,42 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    padding: 0 1rem;
+    line-height: 1.6;
 }
 
+/* Header Styles */
 header {
     background: #3498db;
     color: white;
-    text-align: center;
     padding: 1rem;
+    position: relative;
+    text-align: center;
 }
 
 header h1 {
     font-size: 1.8rem;
-    margin-bottom: 0.5rem;
 }
 
 /* Navigation Styles */
-nav {
-    background: #2980b9;
-}
-
 .nav-menu {
-    display: flex;
+    display: none; /* Hidden by default for mobile view */
     flex-direction: column;
     list-style: none;
     padding: 0;
     margin: 0;
+    background: #2980b9;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    width: 100%;
     text-align: center;
+    z-index: 5;
+}
+
+.nav-menu.visible {
+    display: flex; /* Show menu when visible */
 }
 
 .nav-menu li {
@@ -48,6 +54,7 @@ nav {
     text-decoration: none;
     padding: 0.5rem;
     font-weight: bold;
+    display: block;
     transition: all 0.3s;
 }
 
@@ -56,53 +63,39 @@ nav {
     border-radius: 5px;
 }
 
-/* Main Styles */
-main {
-    max-width: 600px;
-    margin: 2rem auto;
-    text-align: center;
-}
-
-main h2 {
-    margin-bottom: 1.5rem;
-    color: #2c3e50;
-}
-
-/* Gallery Styles */
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-figure {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: white;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
+/* Hamburger Button */
+.hamburger-btn {
+    display: none; /* Hidden by default */
+    background: #2980b9;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
     border-radius: 5px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
 }
 
-figcaption {
-    margin-top: 0.5rem;
-    font-weight: bold;
-    color: #34495e;
+/* Show hamburger button in mobile view */
+@media (max-width: 767px) {
+    .hamburger-btn {
+        display: block;
+    }
 }
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #666;
-}
+/* Reset menu visibility and position in larger views */
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex !important; /* Always visible on larger screens */
+        flex-direction: row;
+        position: static;
+        width: auto;
+    }
 
-footer p {
-    margin: 0.5rem 0;
+    .hamburger-btn {
+        display: none; /* Hide hamburger button */
+    }
 }
