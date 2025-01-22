@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #124578;
+    --text-color: #000;
+    --background-color: #f4f4f4;
+    --hover-color: #1abc9c;
+    --header-text: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+}
+
+h1 {
+    border: 2px solid black; 
+    padding: 10px 200px; 
+    display: inline-block; 
+    border-radius: 5px; 
+    background-color: #f4f4f4; 
+    margin: 20px auto; 
+    text-align: center; 
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: repeat(2, 1fr);  
+    gap: 20px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    position: relative;
+}
+
+
+.data {
+    grid-column: 1; 
+    grid-row: 1;  
+    border: 2px solid black; 
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    box-shadow: var(--box-shadow);
+}
+
+
+.weather {
+    grid-column: 4; 
+    grid-row: 2;  
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+}
+
+
+.card {
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.card h2 {
+    border: 2px solid black; 
+    padding: 10px; 
+    display: inline-block; 
+    background-color: var(--background-color); 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+    text-align: center;
+}
+
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin: 0.5rem 0;
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    border-top: 5px solid var(--secondary-color);
+}
