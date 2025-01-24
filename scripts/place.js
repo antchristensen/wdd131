@@ -12,8 +12,8 @@ currentYear.textContent = fullYear
 lastModified.textContent = `Last Modification: ${lastModification}`
 
 
-const temperatureC = 10; // Static temperature in °C
-const windSpeedKmH = 6; // Static wind speed in km/h
+const temperatureC = 10; 
+const windSpeedKmH = 6; 
 
 /**
  * Calculate the wind chill factor using the metric formula.
@@ -37,7 +37,7 @@ function calculateWindChill(temp, windSpeed) {
  * @returns {string} - Wind chill as a formatted string or "N/A".
  */
 function displayWindChill(temp, windSpeed) {
-    if (temp <= 10 && windSpeed > 4.8) { // Conditions for valid wind chill calculation
+    if (temp <= 10 && windSpeed > 4.8) { 
         const windChill = calculateWindChill(temp, windSpeed);
         return `${windChill.toFixed(2)} °C`; 
     } else {
@@ -45,10 +45,10 @@ function displayWindChill(temp, windSpeed) {
     }
 }
 
-// Perform the calculation
+
 const windChillOutput = displayWindChill(temperatureC, windSpeedKmH);
 
-// Update the weather section in the HTML
+
 const weatherSection = document.querySelector(".weather-section ol");
 if (weatherSection) {
     weatherSection.insertAdjacentHTML(
