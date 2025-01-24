@@ -1,7 +1,7 @@
 :root {
     --primary-color: black;
     --text-color: #D52B1E;
-    --background-color: rgba(255, 255, 255, 0.8); 
+    --background-color: rgba(255, 255, 255, 0.8);
     --header-text: white;
     --padding: 15px;
 }
@@ -31,21 +31,17 @@ body {
 .main-content {
     display: flex;
     flex-direction: column;
-    padding: var(--padding);
-    gap: 20px;
     align-items: center;
-}
-
-.image-section {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
+    gap: 20px;
+    padding: var(--padding);
 }
 
 .image-section img {
     width: 100%;
     max-width: 400px;
     height: auto;
+    display: block;
+    margin: 0 auto;
     border: 5px solid var(--primary-color);
     border-radius: 10px;
 }
@@ -61,9 +57,15 @@ body {
     text-align: center;
 }
 
-.data-section h2,
 .weather-section h2 {
-    color: var(--text-color);
+    position: relative;
+    display: inline-block;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
 }
 
 .data-section ol,
@@ -76,12 +78,6 @@ body {
 .data-section li,
 .weather-section li {
     padding: 5px 0;
-}
-
-.weather-icon {
-    width: 50px;
-    height: 50px;
-    margin: 10px auto;
 }
 
 .footer {
@@ -101,15 +97,14 @@ body {
     font-size: 12px;
 }
 
-
 @media (max-width: 768px) {
-    .title {
-        font-size: 20px;
+    .main-content {
+        gap: 20px;
+        padding: 10px;
     }
 
-    .image-section img {
-        width: 100%;
-        max-width: 350px;
+    .title {
+        font-size: 20px;
     }
 
     .data-section,
@@ -118,8 +113,13 @@ body {
         padding: 10px;
     }
 
+    .image-section img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
     .footer {
-        font-size: 12px;
         padding: 10px;
+        font-size: 12px;
     }
 }
