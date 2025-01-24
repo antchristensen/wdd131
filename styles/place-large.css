@@ -84,7 +84,6 @@ body {
     display: inline-block;
     width: 60px;
     height: 60px;
-    background-image: url('../images/cloud.svg'); 
     background-size: contain; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -93,6 +92,13 @@ body {
     right: -70px;
 }
 
+.weather-icon {
+    display: none;
+}
+
+.cloud-emoji {
+    display: inline;
+}
 
 .data-section ol,
 .weather-section ol {
@@ -121,7 +127,6 @@ body {
     color: var(--header-text);
 }
 
-
 @media (min-width: 769px) {
     .data-section {
         position: absolute;
@@ -134,8 +139,15 @@ body {
         bottom: 180px;
         right: 40px;
     }
-}
 
+    .weather-icon {
+        display: none;
+    }
+
+    .cloud-emoji {
+        display: inline;
+    }
+}
 
 @media (max-width: 768px) {
     .main-content {
@@ -161,5 +173,16 @@ body {
 
     .weather-section h2::after {
         display: none !important; 
+    }
+
+    .weather-icon {
+        display: block;
+        width: 50px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .cloud-emoji {
+        display: none !important;
     }
 }

@@ -1,19 +1,17 @@
+// Get current date
 const today = new Date();
 
-const currentYear = document.querySelector("#currentYear")
-const lastModified = document.querySelector("#lastModified")
+// Get elements for current year and last modification date
+const currentYear = document.querySelector("#currentYear");
+const lastModified = document.querySelector("#lastModified");
 
+// Display the current year and last modification date
+currentYear.textContent = today.getFullYear();
+lastModified.textContent = `Last Modification: ${document.lastModified}`;
 
-const fullYear = today.getFullYear()
-
-const lastModification = document.lastModified
-
-currentYear.textContent = fullYear
-lastModified.textContent = `Last Modification: ${lastModification}`
-
-
-const temperatureC = 10; 
-const windSpeedKmH = 6; 
+// Define temperature and wind speed for wind chill calculation
+const temperatureC = 10; // Example temperature in °C
+const windSpeedKmH = 6;  // Example wind speed in km/h
 
 /**
  * Calculate the wind chill factor using the metric formula.
@@ -21,40 +19,14 @@ const windSpeedKmH = 6;
  * @param {number} windSpeed - The wind speed in km/h.
  * @returns {number} - The calculated wind chill factor.
  */
-function calculateWindChill(temp, windSpeed) {
-    return (
-        13.12 +
-        0.6215 * temp -
-        11.37 * Math.pow(windSpeed, 0.16) +
-        0.3965 * temp * Math.pow(windSpeed, 0.16)
-    );
-}
+const calculateWindChill = (temp, windSpeed) => 
+    13.12 + 0.6215 * temp - 11.37 * windSpeed ** 0.16 + 0.3965 * temp * windSpeed ** 0.16;
 
-/**
- * Display the wind chill or "N/A" if conditions are not met.
- * @param {number} temp - The temperature in °C.
- * @param {number} windSpeed - The wind speed in km/h.
- * @returns {string} - Wind chill as a formatted string or "N/A".
- */
-function displayWindChill(temp, windSpeed) {
-    if (temp <= 10 && windSpeed > 4.8) { 
-        const windChill = calculateWindChill(temp, windSpeed);
-        return `${windChill.toFixed(2)} °C`; 
-    } else {
-        return "N/A";
-    }
-}
-
-
-const windChillOutput = displayWindChill(temperatureC, windSpeedKmH);
-
-
-const weatherSection = document.querySelector(".weather-section ol");
-if (weatherSection) {
-    weatherSection.insertAdjacentHTML(
+// Display wind chill if conditions are met
+if (temperatureC <= 10 && windSpeedKmH > 4.8) {
+    const windChillOutput = `${calculateWindChill(temperatureC, windSpeedKmH).toFixed(2)} °C`;
+    document.querySelector(".weather-section ol").insertAdjacentHTML(
         "beforeend",
         `<li>Wind Chill: ${windChillOutput}</li>`
     );
-} else {
-    console.error("Weather section not found in the DOM.");
 }
