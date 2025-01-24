@@ -35,9 +35,9 @@ body {
 .main-content {
     flex-grow: 1;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 20px; /* Add spacing between items */
+    gap: 20px; 
     padding: 10px;
 }
 
@@ -53,7 +53,7 @@ body {
     justify-content: center;
     padding: 20px;
     gap: 20px;
-    height: 50vh; /* Default height for larger screens */
+    height: 50vh; 
 }
 
 .image-section img {
@@ -62,7 +62,7 @@ body {
 
 .data-section,
 .weather-section {
-    width: 30%; /* Default width for larger screens */
+    width: 30%; 
     padding: var(--padding);
     background-color: var(--background-color);
     border: 10px solid var(--primary-color);
@@ -93,7 +93,7 @@ body {
     right: -70px;
 }
 
-/* List Styling */
+
 .data-section ol,
 .weather-section ol {
     list-style-type: none;
@@ -121,7 +121,7 @@ body {
     color: var(--header-text);
 }
 
-/* Media Query for Large Screens */
+
 @media (min-width: 769px) {
     .data-section {
         position: absolute;
