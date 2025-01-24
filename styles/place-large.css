@@ -44,7 +44,7 @@ body {
 .image-section {
     flex-grow: 1;
     width: 100%;
-    background-image: url('../images/hero-large-canada.webp');
+    background-image: url('../images/hero-large-canada1.webp');
     background-size: cover;
     background-position: center;
     display: flex;
