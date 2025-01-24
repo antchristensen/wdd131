@@ -6,52 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Dynamic Web Fundamentals - Anthony Christensen</title>
     <meta name="author" content="Anthony Christensen">
-    <meta name="description" content="WDD 131 Place Page">
+    <meta name="description" content="WDD 131 Canada Page">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script defer src="scripts/place.js"></script>
-    <script defer src="scripts/getdates.js"></script>
+
 </head>
-
-
 <body>
-    <header>
-        <h1>Title</h1>
-    </header>
-    <main>
-        <section class="data">
-            <div class="card">
-                <h2>Data</h2>
-                <ul>
-                    <li><strong>Area:</strong> Value</li>
-                    <li><strong>Population:</strong> Value</li>
-                    <li><strong>Capital:</strong> Value</li>
-                    <li><strong>Languages:</strong> Value</li>
-                    <li><strong>Currency:</strong> Value</li>
-                    <li><strong>Time Zone:</strong> Value</li>
-                    <li><strong>Calling Code:</strong> Value</li>
-                    <li><strong>Internet TLD:</strong> Value</li>
-                </ul>
-            </div>
+    <div class="container">
+      <header class="title">
+        <h1>Canada</h1>
+      </header>
+      <main class="main-content">
+        <section class="image-section">
+          <picture>
+            <source srcset="images/hero-large-canada.webp" media="(min-width: 1000px)">
+            <source srcset="images/hero-medium-canada.webp" media="(min-width: 550px)">
+            <img src="images/hero-small-canada.webp" alt="Cocora Valley" class="responsive-image" width="400" height="200">
+          </picture>
         </section>
-        <section class="weather">
-            <div class="card">
-                <h2>Weather</h2>
-                <ul>
-                    <li><strong>Label:</strong> Value</li>
-                    <li><strong>Label:</strong> Value</li>
-                    <li><strong>Label:</strong> Value</li>
-                    <li><strong>Label:</strong> Value</li>
-                </ul>
-            </div>
+        <section class="data-section">
+          <h2>Data <img src="/images/flag.svg" alt="colombian flag"></h2>
+          <ol>
+            <li>Area: 1.141,748 sq Km </li>
+            <li>Population: 53 million</li>
+            <li>Capital: Bogota</li>
+            <li>Language: Spanish</li>
+            <li>Currency: Colombian Pesos</li>
+            <li>Time Zone: GMT-5</li>
+            <li>Calling Code: +57</li>
+            <li>Internet TDL: .co</li>
+          </ol>
         </section>
-    </main>
-    <footer>
-        <p>&copy;<span id="currentYear"></span> Anthony Christensen Utah</p>
-        <p id="lastModified"></p>
-    </footer>
-</body>
-</html>
+        <section class="weather-section">
+          <h2>Weather <img src="/images/cloud.svg" alt="colombian flag"></h2>
+          <ol>
+            <li>Temperatura: 20°C</li>
+            <li>Conditions: Mostly Sunny</li>
+            <li>Wind: 11 km/hr </li>
+          </ol>
+        </section>
+      </main>
+      <footer class="footer">
+        <p>&copy;<span id="currentYear"></span> | Anthony Christensen | Utah</p>
+        <p id="lastModified"></p>      
+      </footer>
+    </div>
+  </body>
+  </html>

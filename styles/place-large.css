@@ -1,0 +1,152 @@
+:root{
+    font-size: 20px;
+    padding: 10px;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family:"Roboto", serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title {
+    text-align: center;
+    padding: 20px;
+    background-color:var(--background-color);
+    border-bottom: 10px solid var(--primary-color);
+    font-size: 30px;
+    color:var(--text-color)
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image-section {
+    flex-grow: 1; 
+    width: 100%;
+    background-image: url('../images/hero-large-canada.webp'); 
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+  }
+
+  .image-section img{
+    display: none;
+  }
+  
+  .data-section,
+  .weather-section {
+    width: 30%;
+    padding: var(--padding);
+    background-color: var(--background-color);
+    border:10px solid var(--primary-color);
+    border-radius: 15px;
+  }
+
+  .data-section h2, .weather-section h2{
+    text-align: center;
+    padding: var(--padding);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+  }
+
+  .data-section {
+    position: absolute;
+    top: 180px;
+    left: 40px;
+  }
+
+  .data-section ol, .weather-section ol{
+    text-align: center;
+    list-style-type: none;
+    font-size: var(--font-size);
+  }
+
+  .data-section li, .weather-section li{
+    padding: 2px;
+  }
+  
+  .weather-section {
+    position: absolute;
+    bottom: 180px;
+    right: 40px;
+  }
+
+.weather-section h2::after {
+    content: ''; 
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/cloud.svg'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    position: relative;
+    top: 45px;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.data-section img, .weather-section img{
+    display: none;
+}
+
+.data-section h2::after {
+    content: ''; 
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    position: relative;
+    top: 45px;
+    left: 20px;
+    transform: translateY(-50%);
+}
+  
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--text-color);
+    border-top: 10px solid var(--primary-color);
+    color: var(--header-text);
+    font-size: 25px;
+
+  }
+
+  .last-modified{
+    font-size: 25px;
+    padding: var(--padding);
+    color:var(--header-text);
+}
+@media (min-width: 769px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}  
