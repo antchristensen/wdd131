@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatchEvent(new Event("resize"));
   });
   
-  const today = new Date();
+const today = new Date();
 
 const currentYear = document.querySelector("#currentYear")
 const lastModified = document.querySelector("#lastModified")
