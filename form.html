@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - forms - Anthony Christensen</title>
+    <meta name="author" content="Anthony Christensen">
+    <meta name="description" content="Product Form Page">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script defer src="scripts/form.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+
+    <main>
+        <section id="form-section">
+            <h2>Submit Your Product Review</h2>
+            <form id="reviewForm" action="review.html" method="get">
+                <!-- Product Selection -->
+                <fieldset>
+                    <legend>Product Information</legend>
+                    <label for="productName">Product Name:</label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+                </fieldset>
+
+                <!-- Overall Rating -->
+                <fieldset>
+                    <legend>Overall Rating</legend>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">&#9733;</label>
+                    </div>
+                </fieldset>
+
+                <!-- Date of Installation -->
+                <fieldset>
+                    <legend>Installation Details</legend>
+                    <label for="installDate">Date of Installation:</label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </fieldset>
+
+                <!-- Useful Features -->
+                <fieldset>
+                    <legend>Useful Features</legend>
+                    <label>Select the features you found useful:</label>
+                    <div>
+                        <input type="checkbox" id="feature1" name="features" value="Easy Installation">
+                        <label for="feature1">Easy Installation</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature2" name="features" value="User-Friendly">
+                        <label for="feature2">User-Friendly</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature3" name="features" value="Good Battery Life">
+                        <label for="feature3">Good Battery Life</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature4" name="features" value="Affordable">
+                        <label for="feature4">Affordable</label>
+                    </div>
+                </fieldset>
+
+                <!-- Written Review -->
+                <fieldset>
+                    <legend>Written Review (Optional)</legend>
+                    <label for="review">Write your review:</label>
+                    <textarea id="review" name="review" rows="4" placeholder="Enter your review here..."></textarea>
+                </fieldset>
+
+                <!-- User Name -->
+                <fieldset>
+                    <legend>User Information</legend>
+                    <label for="userName">Your Name (Optional):</label>
+                    <input type="text" id="userName" name="userName">
+                </fieldset>
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit Review">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentYear"></span> Anthony Christensen, Utah</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
