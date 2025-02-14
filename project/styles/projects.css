@@ -1,0 +1,101 @@
+:root {
+    --main-background: #A3B18A;
+    --header-background: #d1d4df;
+    --text-color: black;
+    --header-color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-background);
+}
+
+
+header {
+    background-color: var(--main-background);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: var(--header-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    background-color: var(--main-background);
+    border-radius: 5px;
+}
+
+
+.projects-gallery {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.project {
+    background: var(--header-background);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project p {
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: var(--header-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+    width: 100%;
+}
