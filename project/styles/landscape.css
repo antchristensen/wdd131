@@ -100,7 +100,7 @@ main {
 
 
 .quote-box {
-    background: var(--header-color);
+    background: var(--header-background);
     padding: 15px;
     font-style: italic;
     text-align: center;
